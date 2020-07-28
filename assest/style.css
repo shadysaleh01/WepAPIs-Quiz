@@ -1,0 +1,50 @@
+#wrapper {
+   position: absolute;
+   left: 30%;
+   top: 20%
+
+}
+
+#qDiv {
+   background-color: rgba(184, 216, 247, 0.514);
+   padding: 20px;
+   margin: 10px;
+   text-align: center;
+   width: 520px;
+   height: 500px;
+   border: 1px solid blue;
+   border-radius: 10px;
+}
+
+h1 {
+   color: rgb(49, 49, 252);
+}
+h4 {
+   font-family: Arial, Helvetica, sans-serif;
+   text-align: left;
+   margin-top: 30px;
+   color: rgb(66, 56, 0);
+}
+
+.five-second {
+   color: rgba(253, 0, 0, 0.61);
+}
+
+#startQuiz {
+   margin: 30px;
+   font-size: 25px;
+   padding: 20px 30px;
+   border: none;
+   border-radius: 10px;
+   background-color: rgb(49, 49, 252);
+   color: #fff;
+}
+#startQiuz:hover {
+   margin: 30px;
+   font-size: 25px;
+   padding: 20px 30px;
+   border: none;
+   border-radius: 10px;
+   background-color: rgb(1, 1, 177);
+   color: #fff;
+}
