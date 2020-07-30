@@ -37,7 +37,7 @@ var index = 0
 var score = 0
 // var secondLeft = 80
 // var wrongA = 10
-var timer = 80
+var timer = 65
 
 
 startBtn.addEventListener("click", function () {
@@ -69,9 +69,11 @@ function randerQuestion() {
       ulEl.appendChild(liEl)
       ulEl.appendChild(space)
    }
-
+   var hr = document.createElement("hr")
+   container.appendChild(hr)
 
 }
+
 
 function quizTimer() {
    var interval = setInterval(function () {
@@ -79,7 +81,7 @@ function quizTimer() {
       var currentTime = document.querySelector("#currentTime")
       currentTime.textContent = "Timer: " + timer
 
-      if (timer == 0 || index >= questions.length) {
+      if (timer <= 0 || index >= questions.length) {
          clearInterval(interval)
          endQuiz()
       }
@@ -93,13 +95,16 @@ function fn(event) {
    var currentQ = questions[index]
    var currentPressedLi = event.target
    var valueOfLi = currentPressedLi.getAttribute("data-answer")
-   console.log(valueOfLi)
+
    if (valueOfLi == currentQ.a) {
       score++
+
       console.log("You are right")
    } else {
       console.log("You are wrong")
       timer -= 15
+
+
    }
    index++
 
