@@ -2,27 +2,24 @@
    position: absolute;
    left: 30%;
    top: 20%;
-   background-color: rgba(184, 216, 247, 0.514);
-   padding: 20px;
-   margin: 10px;
-   /* text-align: center; */
    width: 520px;
    height: 500px;
    border: 1px solid blue;
    border-radius: 10px;
-
+   background-color: rgba(184, 216, 247, 0.514);
 }
-
 #qDiv {
-   /* background-color: rgba(184, 216, 247, 0.514);
    padding: 20px;
    margin: 10px;
-   text-align: center;
-   width: 520px;
-   height: 500px;
-   border: 1px solid blue;
-   border-radius: 10px; */
 }
+
+#currentTime {
+   text-align:right;
+   font-size: 20px;
+   height:10px;
+   padding-right:10px
+}
+
 
 .qH1 {
    color: rgb(49, 49, 252);
@@ -42,14 +39,12 @@
 }
 
 #startBtn {
-   margin-left: 160px;
+   margin-left: 33%;
    margin-top: 35px;
-   /* margin: 30px; */
    font-size: 25px;
    padding: 10px 20px;
    border: none;
    border-radius: 10px;
-   /* background-color: rgb(49, 49, 252); */
    color: #fff;
 
 }

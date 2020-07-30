@@ -34,13 +34,14 @@ var questions = [
 ]
 
 var index = 0
-
+var score = 0
 // var secondLeft = 80
 // var wrongA = 10
 var timer = 80
 
 
 startBtn.addEventListener("click", function () {
+   quizTimer()
    randerQuestion()
 })
 
@@ -72,7 +73,22 @@ function randerQuestion() {
 
 }
 
-var score = 0
+function quizTimer() {
+   var interval = setInterval(function () {
+      timer--
+      var currentTime = document.querySelector("#currentTime")
+      currentTime.textContent = "Timer: " + timer
+
+      if (timer == 0 || index >= questions.length) {
+         clearInterval(interval)
+         endQuiz()
+      }
+
+   }, 1000)
+
+}
+
+
 function fn(event) {
    var currentQ = questions[index]
    var currentPressedLi = event.target
@@ -83,7 +99,7 @@ function fn(event) {
       console.log("You are right")
    } else {
       console.log("You are wrong")
-      timer--
+      timer -= 15
    }
    index++
 
@@ -97,22 +113,41 @@ function fn(event) {
 
 function endQuiz() {
    container.textContent = " "
+   currentTime.textContent = " "
    var h1El = document.createElement("h1")
    var scoreEl = document.createElement("h1")
-   scoreEl.setAttribute("style", "color:blue")
+   scoreEl.setAttribute("style", "color:blue ; font-size: 25px; margin-top:20px; text-align:center")
    container.appendChild(h1El)
    container.appendChild(scoreEl)
 
    if (score >= 4) {
-      h1El.textContent = "You past"
-      scoreEl.textContent = "Your Score is " + score
-      h1El.setAttribute("style", "color:green")
+      h1El.textContent = "Congratulation! You past"
+      scoreEl.textContent = "Your Score is: " + score
+      h1El.setAttribute("style", "color:green ; font-size: 35px;text-align:center; margin-top:30px ")
+
    } else {
       h1El.textContent = "You failed"
-      scoreEl.textContent = "Your Score is " + score
-      h1El.setAttribute("style", "color:red")
+      scoreEl.textContent = "Your Score is: " + score
+      h1El.setAttribute("style", "color:red; text-align:center; margin-top:30px")
    }
+
+   // var tryA = document.createElement("button")
+   // tryA.textContent = "Try Agin"
+   // tryA.setAttribute("style", "padding:7px 20px; color:white; background-color:pink; font-size:25px; margin-top:70px; margin-left:170px ")
+
+   // tryA.addEventListener("click", function () {
+   //    quizTimer()
+   //    randerQuestion()
+   // })
+   // container.appendChild(tryA)
+
+
+   // var index = 0
+   // var score = 0
+   // var timer = 80
 }
+
+
 
 
 
