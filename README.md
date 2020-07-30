@@ -1,8 +1,6 @@
 WepAPIs-Quiz
-
-<a href="https://shadysaleh01.github.io/WepAPIs-Quiz/">WepAPIs-Quiz Github IO</a>
 <br>
-<img src="image/screen-shot.PNG" width:300px>
+<a href="https://shadysaleh01.github.io/WepAPIs-Quiz/">WepAPIs-Quiz Github IO</a>
 <br>
 <strong>Summary</strong>
 <ul>
@@ -21,3 +19,5 @@ WepAPIs-Quiz
   <li>When all questions are answered or the timer reaches 0</li>
   <li>Then the game is over</li>
 </ul>
+<br>
+<img src="image/screen-shot.PNG" width:300px>
